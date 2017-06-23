@@ -164,7 +164,7 @@ public class edit_profile extends AppCompatActivity {
                                     String notification = jsonObject.getString("notification");
                                     if(notification.equals("successful"))
                                     {
-                                        Intent intent = new Intent(getApplicationContext(), activity_home.class);
+                                        Intent intent = new Intent(getApplicationContext(), activity_profile.class);
                                         startActivity(intent);
 
                                     }
