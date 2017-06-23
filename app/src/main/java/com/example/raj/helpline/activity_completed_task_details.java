@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -22,6 +23,7 @@ import java.util.Map;
 public class activity_completed_task_details extends AppCompatActivity {
     Toolbar toolbar;
     TextView task_id, task_category, task_time, task_date, caller_name, caller_location,question,answer;
+    RatingBar rating;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class activity_completed_task_details extends AppCompatActivity {
         caller_location = (TextView) findViewById(R.id.caller_location);
         question = (TextView) findViewById(R.id.question);
         answer = (TextView) findViewById(R.id.answer);
+        rating = (RatingBar) findViewById(R.id.rating);
 
         task_id.setText("Task Id:" + getIntent().getStringExtra("task_id"));
         task_category.setText("Category:" + getIntent().getStringExtra("task_category"));
@@ -53,8 +56,7 @@ public class activity_completed_task_details extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             question.setText("Question:"+jsonObject.getString("question"));
                             answer.setText("Answer:"+jsonObject.getString("answer"));
-
-
+                            rating.setRating(Float.parseFloat(jsonObject.getString("rating")));
 
                         } catch (JSONException e) {
                             e.printStackTrace();
