@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_accepted_tasks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.raj.helpline.feedback_completed"
+    android:background="@color/cardview_light_background">
+    android:background="@color/cardview_light_background">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@+id/task_heading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view" />
+
+    <TextView
+        android:text="Feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/task_heading"
+        android:textSize="22sp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold"
+        android:textColor="#03A9F4"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextView
+        android:text="Task Id:21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/task_id"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Category:Commerce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_category"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/task_id"
+        android:layout_alignLeft="@+id/task_id"
+        android:layout_alignStart="@+id/task_id"
+        android:layout_marginTop="11dp" />
+
+
+    <TextView
+        android:text="Question:What is questionsna about?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/task_category"
+        android:layout_alignLeft="@+id/task_category"
+        android:layout_alignStart="@+id/task_category"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Answer:The answer is about the question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/question"
+        android:layout_alignLeft="@+id/question"
+        android:layout_alignStart="@+id/question"
+        android:textStyle="normal|bold" />
+    <TextView
+        android:text="Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agree"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="36dp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/answer"
+        android:layout_alignLeft="@+id/answer"
+        android:layout_alignStart="@+id/answer" />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:layout_below="@+id/agree"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:isIndicator="true"
+        android:progressTint="#FDD835"/>
+
+
+
+
+</RelativeLayout>

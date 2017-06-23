@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_qanda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.raj.helpline.activity_qanda">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        ></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/question"
+        android:background="@color/card_back"
+        android:textColor="?attr/colorControlActivated"
+        android:padding="30px"
+        android:layout_below="@+id/question_label"
+        android:layout_alignLeft="@+id/question_label"
+        android:layout_alignStart="@+id/question_label"
+        android:layout_marginRight="30dp" />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer"
+        android:background="@color/card_back"
+        android:textColor="?attr/colorControlActivated"
+        android:padding="30px"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/answer_label"
+        android:layout_alignLeft="@+id/question"
+        android:layout_alignStart="@+id/question"
+        android:layout_alignRight="@+id/question"
+        android:layout_alignEnd="@+id/question" />
+
+
+         <TextView
+        android:text="Feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:fontFamily="serif-monospace"
+        android:textSize="36sp"
+        android:layout_marginTop="29dp"
+        android:textColor="@color/primary_dark"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold" />
+
+         <Button
+             android:text="submit"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/submit_btn"
+             android:layout_below="@+id/answer"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="18dp"
+             android:textSize="16sp"
+             android:textStyle="normal|bold" />
+
+         <TextView
+             android:text="Client Name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/name_label"
+             android:textColor="@color/primary_darker"
+             android:textSize="22sp"
+             android:fontFamily="serif-monospace"
+             android:textStyle="normal|bold"
+             android:layout_marginTop="23dp"
+             android:layout_below="@+id/textView4"
+             android:layout_alignLeft="@+id/question_label"
+             android:layout_alignStart="@+id/question_label" />
+
+         <EditText
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:inputType="textPersonName"
+             android:ems="10"
+             android:padding="30px"
+             android:layout_marginTop="13dp"
+             android:id="@+id/client_name"
+             android:textColor="?attr/colorControlActivated"
+             android:textSize="18sp"
+             android:background="@color/card_back"
+             android:fontFamily="sans-serif"
+             android:layout_below="@+id/name_label"
+             android:layout_alignLeft="@+id/name_label"
+             android:layout_alignStart="@+id/name_label"
+             android:layout_alignRight="@+id/question"
+             android:layout_alignEnd="@+id/question" />
+
+         <TextView
+             android:text="Question"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="19dp"
+             android:id="@+id/question_label"
+             android:textColor="@color/primary_darker"
+             android:textSize="22sp"
+             android:fontFamily="serif-monospace"
+             android:textStyle="normal|bold"
+             android:layout_below="@+id/client_name"
+             android:layout_toLeftOf="@+id/submit_btn"
+             android:layout_toStartOf="@+id/submit_btn" />
+
+         <TextView
+        android:text="Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer_label"
+        android:textColor="@color/primary_darker"
+        android:textSize="22sp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold"
+             android:layout_marginTop="22dp"
+             android:layout_below="@+id/question"
+             android:layout_alignLeft="@+id/answer"
+             android:layout_alignStart="@+id/answer" />
+
+     </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
